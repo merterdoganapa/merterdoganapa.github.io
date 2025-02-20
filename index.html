@@ -10,26 +10,25 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             text-align: center;
         }
 
         /* Üst Kısım (Profil) */
         .header {
             display: flex;
-            align-items: center;
             justify-content: center;
             padding: 20px;
-            background-color: white;
+            background-color: #ffffff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .profile-img {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 15px;
+            margin-right: 20px;
         }
 
         .header-text {
@@ -38,8 +37,8 @@
 
         .header h1 {
             margin: 0;
-            font-size: 24px;
-            color: #333;
+            font-size: 26px;
+            color: #222;
         }
 
         .header p {
@@ -49,7 +48,6 @@
         }
 
         .linkedin {
-            margin-top: 10px;
             font-size: 16px;
             text-decoration: none;
             color: #0077b5;
@@ -59,60 +57,81 @@
         /* Projeler Bölümü */
         .projects {
             margin-top: 40px;
+            padding: 0 10px;
+        }
+
+        .projects h2 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .project-card {
-            display: flex;
             background: white;
             padding: 15px;
-            margin: 10px auto;
-            width: 80%;
-            max-width: 600px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            text-align: left;
+            display: flex;
         }
 
         .project-img {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             object-fit: cover;
             border-radius: 8px;
             margin-right: 15px;
         }
 
         .project-info {
-            text-align: left;
+            flex: 1;
         }
 
         .project-title {
             font-size: 18px;
             margin: 0;
-            color: #333;
+            color: #222;
         }
 
         .project-description {
             font-size: 14px;
             color: #666;
+            margin: 5px 0;
+        }
+
+        .tech-stack {
+            font-size: 14px;
+            color: #444;
+            font-weight: bold;
+            margin-top: 5px;
         }
 
         .play-store-link {
-            display: inline-block;
+            display: block;
             margin-top: 5px;
-            padding: 8px 12px;
-            background-color: #34a853;
+            margin-left: auto;
+            width: fit-content;
+            padding: 10px 10px;
+            background-color: #1A73E8;
             color: white;
             text-decoration: none;
             border-radius: 4px;
             font-size: 14px;
         }
 
-        .tech-stack {
-            font-size: 16px;
-            color: #444;
-            margin-top: 5px;
-            font-weight: bold;
+        /* Responsive Tasarım */
+        @media (max-width: 600px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
         }
-
     </style>
 </head>
 <body>
@@ -122,104 +141,68 @@
         <div class="header-text">
             <h1>Mert Erdoğan Apa</h1>
             <p>Android Developer</p>
-            <a href="https://www.linkedin.com/in/merterdoganapa20/" class="linkedin">LinkedIn Profilim</a>
+            <p>merterdoganapa@gmail.com</p>
+            <a href="https://www.linkedin.com/in/merterdoganapa20/" class="linkedin">
+                <img src="linkedin.webp" alt="LinkedIn" width="50" height="50">
+            </a>
         </div>
     </div>
 
     <div class="projects">
         <h2>Projelerim</h2>
+        <div class="projects-container">
 
-        <div class="project-card">
-            <img src="virtualtryon.webp" alt="Uygulama Görseli" class="project-img">
-            <div class="project-info">
-                <h3 class="project-title">Sewing Patterns & AI Try On</h3>
-                <p class="project-description">Moda Deneyiminizi Yapay Zeka ile Dönüştürün! Herhangi bir kıyafet fotoğrafını yükleyin ve üzerinizde nasıl göründüğünü anında görün. Dikiş tutkunları, moda tutkunları ve çevrimiçi alışveriş yapanlar için mükemmeldir.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.halmob.sewingpatternstry" class="play-store-link">Google Play'de Gör</a>
-                <p class="tech-stack">Kullanılan Teknolojiler:</p>
-                <ul>
-                    <li>Jetpack Compose</li>
-                    <li>Adapty</li>
-                    <li>Firebase Remote Config</li>
-                    <li>Google Admob</li>
-                    <li>Ktor</li>
-                    <li>Room Database</li>
-                    <li>Flow & Coroutines</li>
-                    <li>Dagger Hilt</li>
-                    <li>Coil</li>
-                </ul>
+            <div class="project-card">
+                <img src="virtualtryon.webp" alt="Uygulama Görseli" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">Sewing Patterns & AI Try On</h3>
+                    <p class="project-description">Kıyafetlerinizi yapay zeka ile deneyin!</p>
+                    <p class="tech-stack">Jetpack Compose, Firebase Remote Config, Ktor, Room, Flow & Coroutines, Dagger Hilt, Coil, Google Admob</p>
+                    <a href="#" class="play-store-link">Google Play'de Gör</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="plantguide.webp" alt="Uygulama Görseli" class="project-img">
-            <div class="project-info">
-                <h3 class="project-title">Plant Guide</h3>
-                <p class="project-description">Plant Guide, yapay zeka destekli bir mobil uygulamadır ve bitkileri tanımlayarak hastalıklarını tespit etmeye yardımcı olur. Kullanıcılara sulama, ışık ve sıcaklık gibi temel bakım önerileri sunarak bitkilerin sağlıklı büyümesini sağlar.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.mea.plant_guide" class="play-store-link">Google Play'de Gör</a>
-                <p class="tech-stack">Kullanılan Teknolojiler:</p>
-                <ul>
-                    <li>Jetpack Compose</li>
-                    <li>Firebase App Check</li>
-                    <li>Google Admob</li>
-                    <li>Proxy Backend</li>
-                    <li>Ktor</li>
-                    <li>Room Database</li>
-                    <li>Flow & Coroutines</li>
-                    <li>Dagger Hilt</li>
-                    <li>Coil</li>
-                </ul>
+            <div class="project-card">
+                <img src="plantguide.webp" alt="Uygulama Görseli" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">Plant Guide</h3>
+                    <p class="project-description">Bitkileri tanımlayın ve bakım önerileri alın.</p>
+                    <p class="tech-stack">Jetpack Compose, Firebase App Check, Ktor, Google Admob, Proxy Backend, Room, Flow & Coroutines, Dagger Hilt, Coil</p>
+                    <a href="#" class="play-store-link">Google Play'de Gör</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="contactimportexport.webp" alt="Uygulama Görseli" class="project-img">
-            <div class="project-info">
-                <h3 class="project-title">Contact Import & Export</h3>
-                <p class="project-description">Telefon kişilerinizi zahmetsizce yönetmenize yardımcı olmak için tasarlanmış güçlü ve sezgisel bir araçtır. Daha iyi bir organizasyon için tüm kişilerinizi uygulamayla senkronize etmek veya çeşitli formatlarda dışa aktarmak istiyorsanız, bu uygulama ihtiyacınızı karşılar.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.mea.contact_import_export" class="play-store-link">Google Play'de Gör</a>
-                <p class="tech-stack">Kullanılan Teknolojiler:</p>
-                <ul>
-                    <li>Jetpack Compose</li>
-                    <li>Room Database</li>
-                    <li>Flow & Coroutines</li>
-                    <li>Dagger Hilt</li>
-                </ul>
+            <div class="project-card">
+                <img src="contactimportexport.webp" alt="Uygulama Görseli" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">Contact Import & Export</h3>
+                    <p class="project-description">Kişilerinizi yönetin ve dışa aktarın.</p>
+                    <p class="tech-stack">Jetpack Compose, Room, Flow & Coroutines, Dagger Hilt</p>
+                    <a href="#" class="play-store-link">Google Play'de Gör</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="todo.webp" alt="Uygulama Görseli" class="project-img">
-            <div class="project-info">
-                <h3 class="project-title">To Do: Manage Tasks</h3>
-                <p class="project-description">Günlük yapılacak işlerinizi zahmetsizce oluşturun, düzenleyin ve organize edin.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.mea.todoapp" class="play-store-link">Google Play'de Gör</a>
-                <p class="tech-stack">Kullanılan Teknolojiler:</p>
-                <ul>
-                    <li>Jetpack Compose</li>
-                    <li>Room Database</li>
-                    <li>Flow & Coroutines</li>
-                    <li>Dagger Hilt</li>
-                </ul>
+            <div class="project-card">
+                <img src="todo.webp" alt="Uygulama Görseli" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">To Do: Manage Tasks</h3>
+                    <p class="project-description">Görevlerinizi organize edin.</p>
+                    <p class="tech-stack">Jetpack Compose, Room, Flow & Coroutines, Dagger Hilt</p>
+                    <a href="#" class="play-store-link">Google Play'de Gör</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="apartmantlar.webp" alt="Uygulama Görseli" class="project-img">
-            <div class="project-info">
-                <h3 class="project-title">Apartments Sudoku</h3>
-                <p class="project-description">Apartment Sudoku, matematik olimpiyatlarından ilham alan yaratıcı bir bulmaca deneyimi sunarak oyuncuların eğlenceli bir oyun deneyiminin tadını çıkarırken mantıksal becerilerini geliştirmelerine olanak tanır.</p>
-                <p class="tech-stack">Kullanılan Teknolojiler:</p>
-                <ul>
-                    <li>Unity</li>
-                    <li>Firebase</li>
-                    <li>Google Admob</li>
-                    <li>SQLite</li>
-                    <li>C#</li>
-                </ul>
-                <a href="https://play.google.com/store/apps/details?id=com.KOKOApps.ApartmentsSudoku" class="play-store-link">Google Play'de Gör</a>
+            <div class="project-card">
+                <img src="apartmantlar.webp" alt="Uygulama Görseli" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">Apartments Sudoku</h3>
+                    <p class="project-description">Zeka bulmacalarıyla eğlenin!</p>
+                    <p class="tech-stack">Unity, Firebase, Google Admob, C#, SQLite</p>
+                    <a href="#" class="play-store-link">Google Play'de Gör</a>
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
 </body>
