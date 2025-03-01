@@ -2,208 +2,336 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-8148037787730261">
-    <title>Mert Erdoğan Apa - Android Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mert Erdoğan Apa - Android Geliştirici</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f6fa;
+            color: #2d3748;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2b6cb0, #3182ce);
+            color: white;
+            padding: 2rem 3rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-left {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .header-left a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .header-left a:hover {
+            color: #ecc94b;
+        }
+
+        .header-logo {
+            flex-grow: 1;
             text-align: center;
         }
 
-        /* Üst Kısım (Profil) */
-        .header {
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-right {
             display: flex;
-            justify-content: center;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            gap: 0.5rem;
         }
 
-        .profile-img {
-            width: 90px;
-            height: 90px;
+        .social-link {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background-color: white;
             border-radius: 50%;
-            object-fit: cover;
-            margin-right: 20px;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
-        .header-text {
-            text-align: left;
+        .social-link:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 26px;
-            color: #222;
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
         }
 
-        .header p {
-            margin: 5px 0;
-            font-size: 18px;
-            color: #666;
-        }
-
-        .linkedin {
-            font-size: 16px;
-            text-decoration: none;
-            color: #0077b5;
-            font-weight: bold;
-        }
-
-        /* Projeler Bölümü */
-        .projects {
-            margin-top: 40px;
-            padding: 0 10px;
-        }
-
-        .projects h2 {
-            font-size: 22px;
-            color: #333;
-        }
-
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 900px;
+        main {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2b6cb0;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: #2b6cb0;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: #4a5568;
+            max-width: 800px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
         }
 
         .project-card {
             background: white;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: left;
-            display: flex;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .project-img {
-            width: 90px;
-            height: 90px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-right: 15px;
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .project-info {
-            flex: 1;
-        }
-
-        .project-title {
-            font-size: 18px;
-            margin: 0;
-            color: #222;
+        .project-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1rem;
         }
 
         .project-description {
-            font-size: 14px;
-            color: #666;
-            margin: 5px 0;
+            color: #718096;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
         }
 
-        .tech-stack {
-            font-size: 14px;
-            color: #444;
-            font-weight: bold;
-            margin-top: 5px;
+        .project-description strong {
+            font-weight: 700;
+            color: #2b6cb0;
         }
 
-        .play-store-link {
-            display: block;
-            margin-top: 5px;
-            margin-left: auto;
-            width: fit-content;
-            padding: 10px 10px;
-            background-color: #1A73E8;
+        .google-play-btn {
+            display: inline-block;
+            background: #2b6cb0;
             color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s ease;
         }
 
-        /* Responsive Tasarım */
-        @media (max-width: 600px) {
-            .projects-container {
+        .google-play-btn:hover {
+            background: #2c5282;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background: #e2e8f0;
+            color: #2d3748;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #2b6cb0;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-left, .header-right {
+                margin: 1rem 0;
+                justify-content: center;
+            }
+
+            .header-logo {
+                margin: 1rem 0;
+            }
+
+            .header-left {
+                gap: 1rem;
+            }
+
+            .header-right {
+                gap: 0.5rem;
+            }
+
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <img src="profile-photo.jpeg" alt="Profil Fotoğrafı" class="profile-img">
-        <div class="header-text">
-            <h1>Mert Erdoğan Apa</h1>
-            <p>Android Developer</p>
-            <p>merterdoganapa@gmail.com</p>
-            <a href="https://www.linkedin.com/in/merterdoganapa20/" class="linkedin">
-                <img src="linkedin.webp" alt="LinkedIn" width="50" height="50">
-            </a>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="#hakkimda">Hakkımda</a>
+                <a href="#projeler">Projeler</a>
+                <a href="#beceriler">Beceriler</a>
+            </div>
+            <div class="header-logo">
+                <span class="logo-text">MEA</span>
+            </div>
+            <div class="header-right">
+                <a href="https://www.linkedin.com/in/merterdoganaapa" target="_blank" class="social-link">
+                    <img src="linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                    <img src="github.png" alt="Github" class="social-icon">
+                </a>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="projects">
-        <h2>Projelerim</h2>
-        <div class="projects-container">
+    <main>
+        <section id="hakkimda">
+            <h2>Hakkımda</h2>
+            <p class="intro-text">
+                Merhaba! Ben Mert Erdoğan Apa, 2,5 yıllık deneyime sahip bir Android geliştiricisiyim. Java, Kotlin ve Jetpack Compose gibi teknolojilerle kullanıcı dostu, performanslı ve yenilikçi Android uygulamaları tasarlamaktan büyük bir tutku duyuyorum.
+                <br><br>
+VSight şirketinde (09/2022 - 12/2024, Vilnius, Litvanya) Android Geliştirici olarak çalıştım. Burada Retrofit, Room, MVVM, Jetpack Compose, Coroutines ve Dagger Hilt gibi teknolojileri kullanarak yüksek kaliteli uygulamalar geliştirdim. Uygulama performansını artırmak için refactoring çalışmaları yaptım, yeni özellikler tasarladım ve müşterilerle iş birliği yaparak uygulama sorunlarını etkin bir şekilde çözdüm. Ayrıca Realwear, Epson ve Moziware gibi markaların AR gözlükleri için özel SDK’lar kullanarak optimize edilmiş uygulamalar geliştirdim ve 20’den fazla Google Play uygulamasından sorumluydum.
+<br><br>
+Daha önce Potensas’ta (11/2020 - 03/2022, İstanbul, Türkiye) oyun geliştiricisi olarak, üniversitedeki staj dönemimde profesyonel deneyimler kazandım. Unity, Firebase ve C# gibi teknolojilerle oyun projeleri geliştirdim ve bu projeleri şirketin Google Play Store hesabında yayımladım.
+<br><br>
+Sakarya Üniversitesi’nde (09/2018 - 06/2022) Bilgisayar Mühendisliği bölümünden mezun oldum ve mobil uygulama geliştirme, Google Play Console kullanımı gibi becerilerimi sürekli geliştiriyorum. Modern teknolojilerle yenilikçi çözümler üretmeye devam ederek, kullanıcılara değer katan uygulamalar geliştirmeyi hedefliyorum.
+</p>
+        </section>
 
-            <div class="project-card">
-                <img src="virtualtryon.webp" alt="Uygulama Görseli" class="project-img">
-                <div class="project-info">
-                    <h3 class="project-title">Sewing Patterns & AI Try On</h3>
-                    <p class="project-description">Kıyafetlerinizi yapay zeka ile deneyin!</p>
-                    <p class="tech-stack">Jetpack Compose, Firebase Remote Config, Ktor, Room, Flow & Coroutines, Dagger Hilt, Coil, Google Admob</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.halmob.sewingpatternstry" class="play-store-link">Google Play'de Gör</a>
+        <section id="projeler">
+            <h2>Projelerim</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="virtualtryon.webp" alt="Sewing Patterns" class="project-icon">
+                    <h3>Sewing Patterns & AI Try On</h3>
+                    <p class="project-description">Yapay zeka ile kıyafet deneme uygulaması. Teknolojiler: <strong>Jetpack Compose</strong>, <strong>Firebase Remote Config</strong>, <strong>Kotlin</strong>, <strong>Room</strong>, <strong>Flow & Coroutines</strong>, <strong>Dagger Hilt</strong>, <strong>Google AdMob</strong>.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.halmob.sewingpatternstry" target="_blank" class="google-play-btn">Google Play</a>
+                </div>
+                <div class="project-card">
+                    <img src="plantguide.webp" alt="Plant Guide" class="project-icon">
+                    <h3>Plant Guide</h3>
+                    <p class="project-description">Bitki bakımı ve tamamlama önerileri. Teknolojiler: <strong>Jetpack Compose</strong>, <strong>Proxy Backend</strong>, <strong>Firebase App Check</strong>, <strong>Kotlin</strong>, <strong>Google AdMob</strong>, <strong>Room</strong>, <strong>Flow & Coroutines</strong>, <strong>Dagger Hilt</strong>.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.mea.plant_guide" target="_blank" class="google-play-btn">Google Play</a>
+                </div>
+                <div class="project-card">
+                    <img src="contactimportexport.webp" alt="Contact Import & Export" class="project-icon">
+                    <h3>Contact Import & Export</h3>
+                    <p class="project-description">Kişi yönetimi uygulaması. Teknolojiler: <strong>Jetpack Compose</strong>, <strong>Room</strong>, <strong>Flow & Coroutines</strong>, <strong>Dagger Hilt</strong>.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.mea.contact_import_export" target="_blank" class="google-play-btn">Google Play</a>
+                </div>
+                <div class="project-card">
+                    <img src="todo.webp" alt="To Do: Manage Tasks" class="project-icon">
+                    <h3>To Do: Manage Tasks</h3>
+                    <p class="project-description">Görev yönetim uygulaması. Teknolojiler: <strong>Jetpack Compose</strong>, <strong>Room</strong>, <strong>Flow & Coroutines</strong>, <strong>Dagger Hilt</strong>.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.mea.todoapp" target="_blank" class="google-play-btn">Google Play</a>
+                </div>
+                <div class="project-card">
+                    <img src="apartmantlar.webp" alt="Apartments Sudoku" class="project-icon">
+                    <h3>Apartments Sudoku</h3>
+                    <p class="project-description">Zeka bulmacası oyunu. Teknolojiler: <strong>Unity</strong>, <strong>Firebase</strong>, <strong>Google AdMob</strong>, <strong>C#</strong>, <strong>SQLite</strong>.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.KOKOApps.ApartmentsSudoku" target="_blank" class="google-play-btn">Google Play</a>
                 </div>
             </div>
+        </section>
 
-            <div class="project-card">
-                <img src="plantguide.webp" alt="Uygulama Görseli" class="project-img">
-                <div class="project-info">
-                    <h3 class="project-title">Plant Guide</h3>
-                    <p class="project-description">Bitkileri tanımlayın ve bakım önerileri alın.</p>
-                    <p class="tech-stack">Jetpack Compose, Firebase App Check, Ktor, Google Admob, Proxy Backend, Room, Flow & Coroutines, Dagger Hilt, Coil</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.mea.plant_guide" class="play-store-link">Google Play'de Gör</a>
-                </div>
+        <section id="beceriler">
+            <h2>Becerilerim</h2>
+            <div class="skills-list">
+                <span class="skill-item">Kotlin</span>
+                <span class="skill-item">Java</span>
+                <span class="skill-item">Jetpack Compose</span>
+                <span class="skill-item">Firebase</span>
+                <span class="skill-item">Room</span>
+                <span class="skill-item">Flow & Coroutines</span>
+                <span class="skill-item">Dagger Hilt</span>
+                <span class="skill-item">RXJava</span>
+                <span class="skill-item">LiveData</span>
+                <span class="skill-item">MVVM</span>
+                <span class="skill-item">REST API</span>
+                <span class="skill-item">Google AdMob</span>
+                <span class="skill-item">Google Play Store</span>
+                <span class="skill-item">Adapty</span>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">Jira</span>
+                <span class="skill-item">Smart Glasses</span>
+                <span class="skill-item">Unity</span>
+                <span class="skill-item">C#</span>
+                <span class="skill-item">SQLite</span>
             </div>
+        </section>
+    </main>
 
-            <div class="project-card">
-                <img src="contactimportexport.webp" alt="Uygulama Görseli" class="project-img">
-                <div class="project-info">
-                    <h3 class="project-title">Contact Import & Export</h3>
-                    <p class="project-description">Kişilerinizi yönetin ve dışa aktarın.</p>
-                    <p class="tech-stack">Jetpack Compose, Room, Flow & Coroutines, Dagger Hilt</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.mea.contact_import_export" class="play-store-link">Google Play'de Gör</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="todo.webp" alt="Uygulama Görseli" class="project-img">
-                <div class="project-info">
-                    <h3 class="project-title">To Do: Manage Tasks</h3>
-                    <p class="project-description">Görevlerinizi organize edin.</p>
-                    <p class="tech-stack">Jetpack Compose, Room, Flow & Coroutines, Dagger Hilt</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.mea.todoapp" class="play-store-link">Google Play'de Gör</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="apartmantlar.webp" alt="Uygulama Görseli" class="project-img">
-                <div class="project-info">
-                    <h3 class="project-title">Apartments Sudoku</h3>
-                    <p class="project-description">Zeka bulmacalarıyla eğlenin!</p>
-                    <p class="tech-stack">Unity, Firebase, Google Admob, C#, SQLite</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.KOKOApps.ApartmentsSudoku" class="play-store-link">Google Play'de Gör</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</body>
+    <footer>
+        <p>© 2025 Mert Erdoğan Apa. Tüm hakları saklıdır.</p>
+    </footer>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91998a56aadcdd21',t:'MTc0MDg0MTM5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
