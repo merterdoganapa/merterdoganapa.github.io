@@ -177,8 +177,23 @@
             transition: background 0.3s ease;
         }
 
+        .visit-btn {
+            display: inline-block;
+            background: #4a5568;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
         .google-play-btn:hover {
             background: #2c5282;
+        }
+
+        .visit-btn:hover {
+            background: #2d3748;
         }
 
         .skills-list {
@@ -262,22 +277,43 @@
             <p class="intro-text">
                 Merhaba! Ben Mert Erdoğan Apa, 3 yıllık deneyime sahip bir Android geliştiricisiyim. Java, Kotlin ve Jetpack Compose gibi teknolojilerle kullanıcı dostu, performanslı ve yenilikçi Android uygulamaları tasarlamaktan büyük bir tutku duyuyorum.
                 <br><br>
-VSight şirketinde (09/2022 - 12/2024, Vilnius, Litvanya) Android Geliştirici olarak çalıştım. Burada Retrofit, Room, MVVM, Jetpack Compose, Coroutines ve Dagger Hilt gibi teknolojileri kullanarak yüksek kaliteli uygulamalar geliştirdim. Uygulama performansını artırmak için refactoring çalışmaları yaptım, yeni özellikler tasarladım ve müşterilerle iş birliği yaparak uygulama sorunlarını etkin bir şekilde çözdüm. Ayrıca Realwear, Epson ve Moziware gibi markaların AR gözlükleri için özel SDK’lar kullanarak optimize edilmiş uygulamalar geliştirdim ve 20’den fazla Google Play uygulamasından sorumluydum.
+VSight şirketinde (09/2022 - 12/2024, Vilnius, Litvanya) Android Geliştirici olarak çalıştım. Burada Retrofit, Room, MVVM, Jetpack Compose, Coroutines ve Dagger Hilt gibi teknolojileri kullanarak yüksek kaliteli uygulamalar geliştirdim. Uygulama performansını artırmak için refactoring çalışmaları yaptım, yeni özellikler tasarladım ve müşterilerle iş birliği yaparak uygulama sorunlarını etkin bir şekilde çözdüm. Ayrıca Realwear, Epson ve Moziware gibi markaların AR gözlükleri için özel SDK'lar kullanarak optimize edilmiş uygulamalar geliştirdim ve 20'den fazla Google Play uygulamasından sorumluydum.
 <br><br>
-Daha önce Potensas’ta (11/2020 - 03/2022, İstanbul, Türkiye) oyun geliştiricisi olarak, üniversitedeki staj dönemimde profesyonel deneyimler kazandım. Unity, Firebase ve C# gibi teknolojilerle oyun projeleri geliştirdim ve bu projeleri şirketin Google Play Store hesabında yayımladım.
+Daha önce Potensas'ta (11/2020 - 03/2022, İstanbul, Türkiye) oyun geliştiricisi olarak, üniversitedeki staj dönemimde profesyonel deneyimler kazandım. Unity, Firebase ve C# gibi teknolojilerle oyun projeleri geliştirdim ve bu projeleri şirketin Google Play Store hesabında yayımladım.
 <br><br>
-Sakarya Üniversitesi’nde (09/2018 - 06/2022) Bilgisayar Mühendisliği bölümünden mezun oldum ve mobil uygulama geliştirme, Google Play Console kullanımı gibi becerilerimi sürekli geliştiriyorum. Modern teknolojilerle yenilikçi çözümler üretmeye devam ederek, kullanıcılara değer katan uygulamalar geliştirmeyi hedefliyorum.
+Sakarya Üniversitesi'nde (09/2018 - 06/2022) Bilgisayar Mühendisliği bölümünden mezun oldum ve mobil uygulama geliştirme, Google Play Console kullanımı gibi becerilerimi sürekli geliştiriyorum. Modern teknolojilerle yenilikçi çözümler üretmeye devam ederek, kullanıcılara değer katan uygulamalar geliştirmeyi hedefliyorum.
 </p>
         </section>
 
         <section id="projeler">
             <h2>Projelerim</h2>
             <div class="projects-grid">
+                <!-- VSight Projeleri -->
+                <div class="project-card">
+                    <img src="workflow.webp" alt="VSight Workflow" class="project-icon">
+                    <h3>VSight Workflow</h3>
+                    <p class="project-description">Endüstriyel iş akışları ve arızaların takibi için mobil çözüm. Teknolojiler: <strong>Kotlin</strong>, <strong>MVVM</strong>, <strong>Jetpack Compose</strong>, <strong>Retrofit</strong>, <strong>Room</strong>, <strong>Coroutines</strong>, <strong>Dagger Hilt</strong>, <strong>Smart Glasses entegrasyonu</strong>.</p>
+                    <a href="https://vsight.io/vsight-workflow/" target="_blank" class="visit-btn">Ziyaret Et</a>
+                </div>
+                <div class="project-card">
+                    <img src="remote.webp" alt="AR Remote Assistance" class="project-icon">
+                    <h3>AR Remote Assistance</h3>
+                    <p class="project-description">Uzaktan AR destekli yardım uygulaması. Teknolojiler: <strong>Kotlin</strong>, <strong>WebRTC</strong>, <strong>MVVM</strong>, <strong>Retrofit</strong>, <strong>Smart Glasses SDK'ları</strong>, <strong>Room</strong>, <strong>Coroutines</strong>, <strong>Dagger Hilt</strong>.</p>
+                    <a href="https://vsight.io/ar-remote-assistance/" target="_blank" class="visit-btn">Ziyaret Et</a>
+                </div>
+                
+                <!-- Kişisel Projeler -->
                 <div class="project-card">
                     <img src="virtualtryon.webp" alt="Sewing Patterns" class="project-icon">
                     <h3>Sewing Patterns & AI Try On</h3>
                     <p class="project-description">Yapay zeka ile kıyafet deneme uygulaması. Teknolojiler: <strong>Jetpack Compose</strong>, <strong>Firebase Remote Config</strong>, <strong>Kotlin</strong>, <strong>Room</strong>, <strong>Flow & Coroutines</strong>, <strong>Dagger Hilt</strong>, <strong>Google AdMob</strong>.</p>
                     <a href="https://play.google.com/store/apps/details?id=com.halmob.sewingpatternstry" target="_blank" class="google-play-btn">Google Play</a>
+                </div>
+                <div class="project-card">
+                    <img src="aichefassistant.webp" alt="AI Chef Assistant" class="project-icon">
+                    <h3>AI Chef Assistant</h3>
+                    <p class="project-description">Tarif önerileri. Teknolojiler: <strong>Firebase Cloud Functions</strong>, <strong>Firebase App Check</strong>, <strong>Kotlin</strong>, <strong>Google AdMob</strong>, <strong>Room</strong>, <strong>Flow & Coroutines</strong>, <strong>Dagger Hilt</strong>.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.mea.aichefassistant" target="_blank" class="google-play-btn">Google Play</a>
                 </div>
                 <div class="project-card">
                     <img src="plantguide.webp" alt="Plant Guide" class="project-icon">
@@ -312,7 +348,9 @@ Sakarya Üniversitesi’nde (09/2018 - 06/2022) Bilgisayar Mühendisliği bölü
                 <span class="skill-item">Kotlin</span>
                 <span class="skill-item">Java</span>
                 <span class="skill-item">Jetpack Compose</span>
+                <span class="skill-item">XML</span>
                 <span class="skill-item">Firebase</span>
+                <span class="skill-item">Firebase Cloud Functions</span>
                 <span class="skill-item">Room</span>
                 <span class="skill-item">Flow & Coroutines</span>
                 <span class="skill-item">Dagger Hilt</span>
@@ -320,6 +358,7 @@ Sakarya Üniversitesi’nde (09/2018 - 06/2022) Bilgisayar Mühendisliği bölü
                 <span class="skill-item">LiveData</span>
                 <span class="skill-item">MVVM</span>
                 <span class="skill-item">REST API</span>
+                <span class="skill-item">WebRTC</span>
                 <span class="skill-item">Google AdMob</span>
                 <span class="skill-item">Google Play Store</span>
                 <span class="skill-item">Adapty</span>
@@ -336,5 +375,5 @@ Sakarya Üniversitesi’nde (09/2018 - 06/2022) Bilgisayar Mühendisliği bölü
     <footer>
         <p>© 2025 Mert Erdoğan Apa. Tüm hakları saklıdır.</p>
     </footer>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91998a56aadcdd21',t:'MTc0MDg0MTM5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
