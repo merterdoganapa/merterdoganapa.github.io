@@ -1,0 +1,18 @@
+[
+  {
+    "id": "658a96a10b4040a52787a106",
+    "name": "Beverage Packs",
+    "productCount": 38,
+    "products": [
+      {
+        "id": "66055119e6d3728ea0a686a0",
+        "name": "Kızılay Erzincan & Misket Limonu ve Nane Aromalı İçecek İkilisi",
+        "attribute": "2 Products",
+        "thumbnailURL": "https://market-product-images-cdn.getirapi.com/product/62a59d8a-4dc4-4b4d-8435-643b1167f636.jpg",
+        "imageURL": "https://market-product-images-cdn.getirapi.com/product/62a59d8a-4dc4-4b4d-8435-643b1167f636.jpg",
+        "price": 65.3,
+        "priceText": "₺65,30"
+      }
+    ]
+  }
+]
