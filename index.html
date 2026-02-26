@@ -177,6 +177,23 @@
             transition: background 0.3s ease;
         }
 
+        .app-store-btn {
+            display: inline-block;
+            background: #1a202c;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
         .visit-btn {
             display: inline-block;
             background: #4a5568;
@@ -190,6 +207,10 @@
 
         .google-play-btn:hover {
             background: #2c5282;
+        }
+
+        .app-store-btn:hover {
+            background: #000000;
         }
 
         .visit-btn:hover {
@@ -304,8 +325,24 @@ Sakarya Üniversitesi'nde (09/2018 - 06/2022) Bilgisayar Mühendisliği bölüm�
                     <p class="project-description">Uzaktan AR destekli yardım uygulaması. Teknolojiler: <strong>Kotlin</strong>, <strong>Java</strong>, <strong>WebRTC</strong>, <strong>MVVM</strong>, <strong>Socket.io</strong>, <strong>Retrofit</strong>, <strong>Smart Glasses SDK'ları</strong>, <strong>Room</strong>, <strong>Coroutines</strong>, <strong>Dagger Hilt</strong>.</p>
                     <a href="https://vsight.io/ar-remote-assistance/" target="_blank" class="visit-btn">Ziyaret Et</a>
                 </div>
-                
+                <div class="project-card">
+                    <img src="bmstores.webp" alt="B&M Stores" class="project-icon">
+                    <h3>B&M Stores</h3>
+                    <p class="project-description">E-commerce alışveriş uygulaması. Teknolojiler: <strong>Jetpack Compose</strong>, <strong>DataStore Proto</strong>, <strong>Dagger Hilt</strong>, <strong>Flow & Coroutines</strong>, <strong>Clean Architecture</strong>, <strong>Modularization</strong>.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.bmretail.bmstores" target="_blank" class="google-play-btn">Google Play</a>
+                </div>
+
                 <!-- Kişisel Projeler -->
+                <div class="project-card">
+                    <img src="dinotale.png" alt="DinoTale AI: Magic Story Maker" class="project-icon">
+                    <h3>DinoTale AI: Magic Story Maker</h3>
+                    <p class="project-description">AI story generator çocuk hikaye uygulaması. Teknolojiler: <strong>Kotlin Multiplatform (KMP)</strong>, <strong>Firebase Cloud Functions</strong>, <strong>AI Story Generation</strong>.</p>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.rnstudio.dinotale" target="_blank" class="google-play-btn">Google Play</a>
+                        <a href="https://apps.apple.com/tr/app/dinotale-ai-magic-story-maker/id6755468535?l=tr" target="_blank" class="app-store-btn">App Store</a>
+                    </div>
+                </div>
+                
                 <div class="project-card">
                     <img src="virtualtryon.webp" alt="Sewing Patterns" class="project-icon">
                     <h3>Sewing Patterns & AI Try On</h3>
